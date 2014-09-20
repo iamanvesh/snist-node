@@ -51,7 +51,6 @@ module.exports = function(passport){
 		passwordField: 'password',
 		passReqToCallback: true
 		}, function(req, email, password, done){
-			console.log(email);
 			User.authenticate(email, password, function(error, user){
 				return done(error, user, error ? {'loginMessage' : error.message} : null);
 			});
