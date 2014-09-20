@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h3= title
+	br
+	form(id="adminLoginForm", method="post", action="/AdminAuth")
+		p
+			input(type="text", placeholder="Username", name="email")
+		p
+			input(type="password", placeholder="Password", name="password")
+		p
+			input(type="submit", value="Login")

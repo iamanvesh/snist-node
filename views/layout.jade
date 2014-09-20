@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", type="text/css", href="/stylesheets/bootstrap.min.css")
+    script(type="text/javascript" src='http://code.jquery.com/jquery-1.11.0.min.js')
+    script(type="text/javascript", src="javascripts/bootstrap.min.js")
+  body
+      .main-content
+      nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .container-fluid
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#snistNavbar')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.brand.pull-left(href='index.html')
+              img(id="snist-logo", src="images/snist-logo.png", alt="SNIST-LOGO")
+            a.navbar-brand(href='/') SNIST
+          #snistNavbar.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  | About SNIST
+                  span.caret
+                ul.dropdown-menu(role='menu')
+                  li
+                    a(href='#') About Sree Group
+                  li
+                    a(href='#') Mission and Vision
+                  li
+                    a(href='#') Management
+                  li
+                    a(href='#') promoters of SNIST
+                  li
+                    a(href='#') Secretary speaks
+                  li
+                    a(href='#') Director speaks
+                  li
+                    a(href='#') Vice Chancellor Speaks
+                  li
+                    a(href='#') Hyderabad History
+                  li
+                    a(href='#') Salient Features
+                  li.divider
+                  li
+                    a(href='#') Achievements
+              li
+                a(href='#') SNIST Vaughn
+              li
+                a(href='#') Academics
+              li
+                a(href='/news') Latest News
+              li
+                a(href='/logout') Logout
+    .container
+        block content

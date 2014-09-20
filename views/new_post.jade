@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= "Add New Post"
+    form(method="post", action="/add_new_post")
+        p
+            input(type="text", placeholder="Title", name="post_title")
+        p
+            input(type="text", placeholder="Slug", name="post_slug")
+        p
+            textarea(rows="10", cols="80" , placeholder="Content goes here", name="post_body")
+        p
+            input(type="submit", placeholder="Submit")

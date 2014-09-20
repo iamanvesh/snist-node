@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	form(id="registerAdminForm", method="post", action="/NewAdminRegistration")
+		p
+			input(type="text", placeholder="Username", name="email")
+		p
+			input(type="password", placeholder="Password", name="password")
+		p
+			input(type="submit", value="Register")
