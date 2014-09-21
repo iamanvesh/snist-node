@@ -1,12 +1,15 @@
-body {
-  padding: 150px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-a {
-  color: #00B7FF;
-}
+@media only screen and (min-width: 320px){
+	body {
+  	padding: 50px;
+  	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	}
 
-#snist-logo{
-	height: 45px;
-	width: auto;
+	a {
+		color: #00B7FF;
+	}
+
+	#snist-logo{
+		height: 45px;
+		width: auto;
+	}
 }

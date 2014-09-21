@@ -1,10 +1,12 @@
 extends layout
 
 block content
-	form(id="registerAdminForm", method="post", action="/NewAdminRegistration")
+	h3= title
+	br
+	form(id="registerAdminForm", method="post", action="/NewAdminRegistration" role="form")
 		p
-			input(type="text", placeholder="Username", name="email")
+			input.form-control(type="text", placeholder="Username", name="email")
 		p
-			input(type="password", placeholder="Password", name="password")
+			input.form-control(type="password", placeholder="Password", name="password")
 		p
-			input(type="submit", value="Register")
+			input.btn.btn-lg.btn-primary.btn-block(type="submit", value="Register")
