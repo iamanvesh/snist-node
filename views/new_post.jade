@@ -2,12 +2,12 @@ extends layout
 
 block content
     h1= "Add New Post"
-    form(method="post", action="/add_new_post")
+    form(method="post", action="/add_new_post" role="form")
         p
-            input(type="text", placeholder="Title", name="post_title")
+            input.form-control(type="text", placeholder="Title", name="post_title")
         p
-            input(type="text", placeholder="Slug", name="post_slug")
+            input.form-control(type="text", placeholder="Slug", name="post_slug")
         p
-            textarea(rows="10", cols="80" , placeholder="Content goes here", name="post_body")
+            textarea.form-control(rows="10", cols="80" , placeholder="Content goes here", name="post_body")
         p
-            input(type="submit", placeholder="Submit")
+            input.btn.btn-lg.btn-primary.btn-block(type="submit", placeholder="Submit", value="Add Post")
