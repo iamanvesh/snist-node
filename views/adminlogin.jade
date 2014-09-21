@@ -1,12 +1,16 @@
 extends layout
 
 block content
-  h3= title
-  br
-  form(id="adminLoginForm", method="post", action="/AdminAuth" role="form")
-    p
-      input.form-control(type="text", placeholder="Username", name="email")
-    p
-      input.form-control(type="password", placeholder="Password", name="password")
-    p
-      input.btn.btn-lg.btn-primary.btn-block(type="submit", value="Login")
+    #container
+      h3= title
+      br
+      if(loginMessage)
+        .alert.alert-danger(role='alert')
+            p= loginMessage
+      form(id="adminLoginForm", method="post", action="/AdminAuth" role="form")
+        p
+          input.form-control(type="text", placeholder="Username", name="email")
+        p
+          input.form-control(type="password", placeholder="Password", name="password")
+        p
+          input.btn.btn-lg.btn-primary.btn-block(type="submit", value="Login")

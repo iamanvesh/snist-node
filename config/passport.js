@@ -52,7 +52,10 @@ module.exports = function(passport){
 		passReqToCallback: true
 		}, function(req, email, password, done){
 			User.authenticate(email, password, function(error, user){
-				return done(error, user, error ? {'loginMessage' : error.message} : null);
+				if(error)
+					return done(null, false, req.flash('loginMessage', error.message));
+				else
+					return done(null, user);
 			});
 		}
 	));

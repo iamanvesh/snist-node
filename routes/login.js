@@ -1,10 +1,19 @@
 module.exports = function(app, passport){
 	app.get('/AdminLogin', function(req, res){
-		res.render('adminlogin', {title: "Admin Login"});
+		/*console.log(req.flash('loginMessage')[0]);
+		var message = req.flash('loginMessage')[0];
+		console.log(message); */
+		res.render('adminlogin', {
+			title: "Admin Login",
+			loginMessage: req.flash('loginMessage')[0]
+		});
 	});
 
 	app.get('/AdminRegistration', function(req,res){
-		res.render('registeradmin', { title: "Admin Registration" });
+		res.render('registeradmin', {
+			title: "Admin Registration",
+			signUpMessage: req.flash('signUpMessage')[0]
+		});
 	});
 
 	app.get('/logout', function(req, res){
